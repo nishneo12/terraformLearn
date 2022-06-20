@@ -1,7 +1,7 @@
 
 variable myvar {
  type=string
-  default = "${thisvar}"
+  default = "${var.thisvar}"
 }
 
 variable mymap {
