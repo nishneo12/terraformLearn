@@ -1,4 +1,2 @@
-variable thisvar 
-{ type =string
-  default= "this default"
-}
+myvar = "this default"
+
