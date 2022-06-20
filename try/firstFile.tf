@@ -1,7 +1,7 @@
 
 variable myvar {
  type=string
-  default = "Hello terraform"
+  default = "${thisvar}"
 }
 
 variable mymap {
