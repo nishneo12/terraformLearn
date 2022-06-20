@@ -2,7 +2,10 @@
 variable myvar {
  type=string
 }
-
+variable copymyvar {
+ type=string
+ default = var.myvar
+}
 variable mymap {
 type=map(string)
  default = {
