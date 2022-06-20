@@ -1,7 +1,6 @@
 
 variable myvar {
  type=string
-  default = var.thisvar
 }
 
 variable mymap {
