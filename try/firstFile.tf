@@ -1,5 +1,5 @@
 
 variable myvar {
- type="string",
+ type="string"
   default = "Hello terraform"
 }
