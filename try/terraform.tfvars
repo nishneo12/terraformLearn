@@ -1,4 +1,1 @@
-thisvar = {
-type =string
-  default = "this default"
-}
+thisvar = "this default"
