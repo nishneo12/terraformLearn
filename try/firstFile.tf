@@ -6,7 +6,8 @@ variable myvar {
 variable mymap {
 type=map(string)
  default = {
- mykey ="my value"
+ mykey ="my value",
+  thisdefault = "from vars"
  }
 }
 
