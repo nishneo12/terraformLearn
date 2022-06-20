@@ -1,2 +1,2 @@
-myvar = "this default"
+myvar = "thisdefault"
 
