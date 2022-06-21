@@ -4,13 +4,13 @@ resource "random_pet" "rg-name" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name      = random_pet.rg-name.id
+  name      = "${var.current_environment+"-"+var.resource_group_suffix}"
   location  = var.resource_group_location
 }
 
 # Create virtual network
 resource "azurerm_virtual_network" "myterraformnetwork" {
-  name                = "myVnet"
+  name                = "${var.current_environment+"-"+var.vnet_suffix}"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -18,7 +18,7 @@ resource "azurerm_virtual_network" "myterraformnetwork" {
 
 # Create subnet
 resource "azurerm_subnet" "myterraformsubnet" {
-  name                 = "mySubnet"
+  name                 = "${var.current_environment+"-"+var.subNet_suffix}"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.myterraformnetwork.name
   address_prefixes     = ["10.0.1.0/24"]
@@ -26,7 +26,7 @@ resource "azurerm_subnet" "myterraformsubnet" {
 
 # Create public IPs
 resource "azurerm_public_ip" "myterraformpublicip" {
-  name                = "myPublicIP"
+  name                = "${var.current_environment+"-"+var.publicIP_suffix}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Dynamic"
