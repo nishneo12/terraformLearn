@@ -7,3 +7,8 @@ variable "resource_group_location" {
   default       = "eastus"
   description   = "Location of the resource group."
 }
+
+variable "current_environment" {
+  default       = "dev"
+  description   = "current application environment"
+}
