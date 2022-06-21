@@ -1,1 +1,1 @@
-current_environment = dev
+current_environment = "dev"
