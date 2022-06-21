@@ -1,1 +1,1 @@
-current_environment = prod
+current_environment = "prod"
